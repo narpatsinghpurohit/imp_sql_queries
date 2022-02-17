@@ -1,4 +1,4 @@
-Get all the columns of table in a string format
+1.Get all the columns of table in a string format
 
 SELECT CONCAT("'", GROUP_CONCAT(column_name ORDER BY ordinal_position SEPARATOR "', '"), "'") AS columns 
 FROM information_schema.columns WHERE table_schema = 'windworld_database' AND table_name = 'app_turbine_data';
