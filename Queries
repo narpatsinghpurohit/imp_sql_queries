@@ -2,3 +2,7 @@
 
 SELECT CONCAT("'", GROUP_CONCAT(column_name ORDER BY ordinal_position SEPARATOR "', '"), "'") AS columns 
 FROM information_schema.columns WHERE table_schema = 'windworld_database' AND table_name = 'app_turbine_data';
+
+2.Get Max of string value of numbers
+
+SELECT MAX(CAST(customer_id AS UNSIGNED)) as max from `loan_applications` where (`customer_id` <> "");
